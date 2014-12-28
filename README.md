@@ -1,4 +1,4 @@
-erl-recaptcha
+erlrecaptcha
 =============
 
 Google recaptcha app for Erlang.
@@ -16,7 +16,7 @@ Everything definded in rebar.config. So, you just need to do :
     $ ./rebar g-d && ./rebar co && ./start.sh
 
     $ Eshell V6.3  (abort with ^G)
-    1> erl-recaptcha:verify("192.168.1.1","c822c1b63853ed273b89687ac505f9fa").
+    1> erlrecaptcha:verify("192.168.1.1","c822c1b63853ed273b89687ac505f9fa").
     false
 
 
@@ -28,13 +28,13 @@ You may use the app in your Chicago Boss project. You just need to add in your r
     
     ...
     
-    {erl-recaptcha,".*",{git, "git://github.com/drlinux/erl-recaptcha.git", "master"}}
+    {erlrecaptcha,".*",{git, "git://github.com/drlinux/erlrecaptcha.git", "master"}}
     
     ]}.
 
     $ ./rebar g-d
   
-Open deps/erl-recaptcha/includes/constant.hrl and change the value YOUR_PRIVATE_KEY with your own key.
+Open deps/erlrecaptcha/includes/constant.hrl and change the value YOUR_PRIVATE_KEY with your own key.
 
 Now you can use the app your validation test as well as in the following code:
 
@@ -43,7 +43,7 @@ Now you can use the app your validation test as well as in the following code:
          
          {fun() -> length(Name) >= 7 end,
     	              "Name area seems invalid!"},
-         {fun() -> erl-recaptcha:verify(RemoteIp, Token) end,
+         {fun() -> erlrecaptcha:verify(RemoteIp, Token) end,
     	               "You are not human!"}
     	   ].
 
