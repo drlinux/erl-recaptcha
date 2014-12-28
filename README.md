@@ -5,7 +5,7 @@ Google recaptcha app for Erlang.
 
 For more information about recapctcha please visit https://developers.google.com/recaptcha/
 
-This module requies [jiffy](https://github.com/davisp/jiffy).
+This module needs [jiffy](https://github.com/davisp/jiffy), already defined in rebar.config.
 
 ####Installation
 
