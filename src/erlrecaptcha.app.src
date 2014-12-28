@@ -1,0 +1,16 @@
+{application, erlrecaptcha,
+ [
+  {description, "Erlang Google Re-captcha library"},
+  {vsn, "0.0.1"},
+  {modules, [
+             erlrecaptcha
+            ]},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+		  crypto,
+		  jiffy
+                 ]},
+  {env, []}
+ ]}.
